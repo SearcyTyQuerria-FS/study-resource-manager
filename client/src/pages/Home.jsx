@@ -41,11 +41,14 @@ function Home() {
   // Update
   const handleUpdate = async (id, updatedData) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/resources/${id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedData),
-      });
+      const res = await fetch(
+        `https://study-resource-manager.onrender.com/api/resources/${id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(updatedData),
+        },
+      );
 
       const data = await res.json();
 
