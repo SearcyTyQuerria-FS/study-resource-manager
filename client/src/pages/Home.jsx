@@ -9,7 +9,9 @@ function Home() {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/resources");
+        const res = await fetch(
+          "https://study-resource-manager.onrender.com/api/resources",
+        );
         const data = await res.json();
         setResources(data);
       } catch (err) {
@@ -28,9 +30,12 @@ function Home() {
   // delete
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:3000/api/resources/${id}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://study-resource-manager.onrender.com/api/resources/${id}`,
+        {
+          method: "DELETE",
+        },
+      );
 
       setResources((prev) => prev.filter((item) => item._id !== id));
     } catch (err) {
