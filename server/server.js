@@ -10,8 +10,11 @@ const app = express();
 app.use(
   cors({
     origin: "https://study-resource-manager.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   }),
 );
+app.options("*", cors());
+
 app.use(express.json());
 
 // Routes
