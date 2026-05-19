@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://study-resource-manager.vercel.app/",
+    origin: "https://study-resource-manager.vercel.app",
   }),
 );
 app.use(express.json());
