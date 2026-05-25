@@ -1,0 +1,30 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/assets/*": [
+        "./assets/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "src/app/index.jsx",
+    "src/app/_layout.jsx",
+    "src/hooks/use-theme.js",
+    "src/hooks/use-color-scheme.web.js",
+    "src/hooks/use-color-scheme.js",
+    "src/constants/theme.js",
+    "src/components/themed-text.jsx",
+    "src/components/themed-view.jsx",
+    "nativewind-env.d.ts"
+  ]
+}
