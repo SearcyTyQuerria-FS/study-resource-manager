@@ -7,21 +7,58 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-DS_Store
-server/.env
+# Dependencies
+node_modules/
+mobile/node_modules/
 
+# Build output
+dist/
+dist-ssr/
+mobile/dist/
+mobile/build/
+web-build/
+
+# Expo / React Native
+.expo/
+mobile/.expo/
+mobile/.expo-shared/
+expo-env.d.ts
+.metro-health-check*
+
+# Native (iOS / Android)
+ios/
+android/
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Environment files
+.env
+.env*.local
+server/.env
+mobile/.env
+
+# macOS junk
+.DS_Store
+mobile/.DS_Store
+*.pem
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+example
